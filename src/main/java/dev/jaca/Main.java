@@ -34,7 +34,33 @@ public class Main {
                     bmi.imputData(bmi.getWeight(), bmi.getHeight());
                     break;
                 case 3:
-                    System.out.println("You selected Option 3");
+                    System.out.println("Enter a first number: ");
+                    var firstNumber = scanner.nextInt();
+                    System.out.println("Enter a second number: ");
+                    var secondNumber = scanner.nextInt();
+                    if (secondNumber < firstNumber) {
+                        System.out.println("Second number must be greater than or equal to first number.");
+                        break;
+                    }
+                    System.out.println("select an option: 1 - even / 2 - odd");
+                    var evenOddOption = scanner.nextInt();
+                    if (evenOddOption == 1) {
+                        System.out.println("Even numbers:");
+                        for (int i = secondNumber; i >= firstNumber; i--) {
+                            if (i % 2 == 0) {
+                                System.out.println(i);
+                            }
+                        }
+                    }else if (evenOddOption == 2) {
+                        System.out.println("Odd numbers:");
+                        for (int i = secondNumber; i >= firstNumber; i--) {
+                            if (i % 2 != 0) {
+                                System.out.println(i);
+                            }
+                        }
+                    }else{
+                        System.out.println("Invalid option.");
+                    }
                     break;
                 case 4:
                     System.out.println("You selected Option 4");
