@@ -17,7 +17,11 @@ public class Main {
             option = scanner.nextInt();
             switch(option){
                 case 1:
-                    System.out.println("You selected Option 1");
+                    System.out.println("informe o numero que deja a tabuada:");
+                    var numero = scanner.nextInt();
+                    for(int i = 1; i <= 10; i++){
+                        System.out.printf("%d x %d = %d%n", numero, i, numero * i);
+                    }
                     break;
                 case 2:
                     System.out.println("You selected Option 2");
@@ -34,6 +38,6 @@ public class Main {
                 default:
                     System.out.println("Invalid option. Please try again.");
             }
-        } while(option != 3);
+        } while(option != 5);
     }    
 }
