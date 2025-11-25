@@ -17,10 +17,10 @@ public class Main {
             option = scanner.nextInt();
             switch(option){
                 case 1:
-                    System.out.println("informe o numero que deja a tabuada:");
-                    var numero = scanner.nextInt();
+                    System.out.println("Enter a number for its multiplication table: ");
+                    var number = scanner.nextInt();
                     for(int i = 1; i <= 10; i++){
-                        System.out.printf("%d x %d = %d%n", numero, i, numero * i);
+                        System.out.printf("%d x %d = %d%n", number, i, number * i);
                     }
                     break;
                 case 2:
