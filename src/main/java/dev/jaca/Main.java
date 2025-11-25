@@ -2,6 +2,8 @@ package dev.jaca;
 
 import java.util.Scanner;
 
+import dev.jaca.desenvolvimento.Bmi;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -9,7 +11,7 @@ public class Main {
         do{
             System.out.println("\n=== EXERCISE MENU ===");
             System.out.println("1. Multiplication Table");
-            System.out.println("2. IMC Calculator");
+            System.out.println("2. BMI Calculator");
             System.out.println("3. Even or Odd Checker");
             System.out.println("4. Remainder");
             System.out.println("5. Exit");
@@ -24,7 +26,12 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("You selected Option 2");
+                    Bmi bmi = new Bmi();
+                    System.out.println("Enter your weight (kg): ");
+                    bmi.setWeight(scanner.nextFloat());
+                    System.out.println("Enter your height (m): ");
+                    bmi.setHeight(scanner.nextFloat());
+                    bmi.imputData(bmi.getWeight(), bmi.getHeight());
                     break;
                 case 3:
                     System.out.println("You selected Option 3");
