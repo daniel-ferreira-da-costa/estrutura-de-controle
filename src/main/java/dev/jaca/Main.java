@@ -3,6 +3,7 @@ package dev.jaca;
 import java.util.Scanner;
 
 import dev.jaca.desenvolvimento.Bmi;
+import lombok.experimental.var;
 
 public class Main {
     public static void main(String[] args) {
@@ -63,7 +64,24 @@ public class Main {
                     }
                     break;
                 case 4:
-                    System.out.println("You selected Option 4");
+                    System.out.println("Inform a first number: ");
+                    var firstNum = scanner.nextInt();
+                    while (true) {
+                        System.out.println("Inform a second number (not than first number): ");
+                        var secondNum = scanner.nextInt();
+                        if(secondNum < firstNum){
+                            System.out.println("Second number must be greater than or equal to first number. /n");
+                            continue;
+                        }
+                        var remainder = firstNum % secondNum;
+                        if (remainder == 0) {
+                            System.out.printf("Finished! the remainder of %d divided by %d is %d", firstNum, secondNum, remainder);
+                            break;
+                        } else {
+                            System.out.println("continuing %d by %d gives a remainder of %d".formatted(firstNum, secondNum, remainder));
+                            continue;
+                        }
+                    }
                     break;
                 case 5:
                     System.out.println("Exiting...");
